@@ -37,6 +37,10 @@ $primary-color-hover: #f27831;
   input[type="radio"] {
     margin: 0 5px;
   }
+
+  .radios {
+    min-width: 80px;
+  }
 }
 
 .btn {

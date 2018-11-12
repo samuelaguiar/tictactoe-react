@@ -81,7 +81,7 @@ class index extends Component {
                 onChange={this.onChange}
               />
             </div>
-            <div>
+            <div className={style.radios}>
               <input
                 type="radio"
                 name="playerOneSymbol"
@@ -107,7 +107,7 @@ class index extends Component {
                 onChange={this.onChange}
               />
             </div>
-            <div>
+            <div className={style.radios}>
               <input
                 type="radio"
                 name="playerTwoSymbol"
