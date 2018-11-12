@@ -1,0 +1,16 @@
+$primary-color: #f9823d;
+
+.layout {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 1.25rem 1rem;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.gameLogo {
+  background-color: $primary-color;
+  padding: 1%;
+}

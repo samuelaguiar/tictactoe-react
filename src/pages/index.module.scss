@@ -1,0 +1,65 @@
+$primary-color: #f9823d;
+$primary-color-hover: #f27831;
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.form {
+  max-width: 400px;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup {
+  margin: 3% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  label {
+    margin-right: 10px;
+  }
+
+  input {
+    border-width: 0;
+    background-color: rgba(0,0,0,.08);
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input[type="radio"] {
+    margin: 0 5px;
+  }
+}
+
+.btn {
+  margin: 3% auto;
+  border-width: 0;
+  background-color: $primary-color;
+  padding: 2% 5%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all ease .2s;
+}
+
+.btn:hover {
+  background-color: $primary-color-hover;
+  transition: all ease .2s;
+}
+
+.btn:active {
+  @include transform(translate(3px, 3px));
+  transition: all ease .2s;
+}
+
+.btn:focus {
+  outline: none;
+}

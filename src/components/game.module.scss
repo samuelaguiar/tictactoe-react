@@ -1,0 +1,109 @@
+$primary-color: #f9823d;
+$primary-color-hover: #f27831;
+$box-color: #eaeaea;
+$box-color-hover: #ddd;
+$white: #fff;
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.container {
+  max-width: 340px;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 0;
+
+  span {
+    padding: 0 4%;
+  }
+}
+
+.turnPlayer {
+  background-color: $primary-color;
+}
+
+.message {
+  background-color: $primary-color;
+  text-align: center;
+  font-weight: bold;
+  padding: 2% 0;
+  margin: 3% 0 0;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 4%;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $box-color;
+  width: 100px;
+  height: 100px;
+  margin: 10px 0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 6px;
+  transition: all ease .2s;
+}
+
+.box:hover {
+  background-color: $box-color-hover;
+  transition: all ease .2s;
+}
+
+.box:active,
+.restart:active {
+  @include transform(translate(3px, 3px));
+  transition: all ease .2s;
+}
+
+.box:focus {
+  outline: none;
+}
+
+.boxWin {
+  background-color: $primary-color;
+}
+
+.check {
+  margin: 0;
+  font-size: 300%;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.restart {
+  margin: 3% auto;
+  border-width: 0;
+  background-color: $primary-color;
+  padding: 2% 5%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all ease .2s;
+}
+
+.restart:hover {
+  background-color: $primary-color-hover;
+  transition: all ease .2s;
+}
+
+.restart:focus {
+  outline: none;
+}
